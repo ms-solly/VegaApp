@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    .font-outline-2 {
+      -webkit-text-stroke: 2px black;
+    }
+    .font-outline-4 {
+      -webkit-text-stroke: 4px black;
+    }
+  }
+
+  .dancing-veggies {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .veggie {
+    width: 300px;  /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    animation: dance 1.5s infinite;
+  }
+  
+  .veggie:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .veggie:nth-child(2) {
+    animation-delay: 0.5s;
+    width: 90px;
+  }
+  
+  .veggie:nth-child(3) {
+    animation-delay: 1s;
+    width: 80px;
+  }
+  
+  @keyframes dance {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .welcome{
+      visibility: hidden;
+    }
+}
+
+body{
+  background: rgb(189, 218, 253);
+}
