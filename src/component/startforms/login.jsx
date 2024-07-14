@@ -44,16 +44,16 @@ export default function LoginPg() {
       {/* bg end  */}
 
       {/* start first div */}
-      <div className="absolute inset-0 flex items-center justify-center overflow-y-auto">
+      <div className="absolute scroll-m-0  inset-0 md:flex  items-center justify-center overflow-y-auto  ">
         {/* here image hogi */}
-        <div className="relative pt-30">
+        <div className="relative flex justify-center pt-30">
           <img className="h-96 " src={Welcome} alt="Welcome" />
           <button onClick={togglePopup} className="absolute top-1/2 right-2/4 bg-green-500 text-white p-1 rounded hover:bg-green-800 m-2 font-semibold text-sm">Click here!</button>
         </div>
 
         {/* second div start */}
-        <div className="bg-white/30 border border-white/30 backdrop-blur-lg rounded-lg shadow-lg p-10 space-y-6 w-full max-w-md">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="bg-white/30 border border-white/30 backdrop-blur-lg rounded-lg shadow-lg p-10 space-y-6 w-full max-w-md  ">
+          <form onSubmit={handleSubmit} className="space-y-6 overflow-y-auto  ">
             <div className="relative">
               <label htmlFor="email" className="block mb-2 text-sm text-green-700 leading-10 tracking-wider font-semibold">Your Email</label>
               <input type="email" name="email" id="email" className="input-field text-gray-900 rounded-lg bg-white/40 border border-green-400 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-green-600 block w-full p-3 h-9 transition duration-200 ease-in-out text-xs" placeholder="john@example.com" required />
@@ -77,9 +77,9 @@ export default function LoginPg() {
 
       {/* Popup div */}
       {isPopupVisible() && (
-        <div className="fixed bg-white/30 inset-0 border border-white/30 backdrop-blur-lg rounded-lg shadow-lg p-10 space-y-6 w-full z-50 flex justify-center">
-          <div className="bg-white/30 border border-white/30 backdrop-blur-lg flex flex-row rounded-lg shadow-lg p-10 space-y-6 w-full max-h-screen overflow-y-auto">
-            <div className='w-3/5'>
+        <div className="fixed bg-white/30 inset-0 border border-white/30 backdrop-blur-lg rounded-lg shadow-lg p-10 space-y-6 w-full z-50 flex justify-center ">
+          <div className="bg-white/30 border border-white/30 backdrop-blur-lg md:flex flex-row rounded-lg shadow-lg p-10 space-y-6 w-full max-h-screen overflow-y-auto scroll-p-0	scroll-m-0">
+            <div className='md:w-3/5'>
               <h2 className="text-2xl font-semibold mb-4">KNOW ABOUT VEGA CHAT<img src={Leaf} alt="" className='w-10 h-12 inline-block'/></h2>
               <p className='text-[#0D8E12] text-center font-martel-sans text-xl font-bold leading-loose'>At <span className='text-[#E56D13] font-martel-sans font-extralight uppercase'>Vegachat</span>, we're on a mission to create a <span className='text-[#E56D13] font-martel-sans font-extralight uppercase'>kinder</span> and more <span className='text-[#E56D13] font-martel-sans font-extralight uppercase'>compassionate</span> world. Our platform is more than just a social media site—it's a community of like-minded individuals dedicated to spreading <span className='text-[#E56D13] font-martel-sans font-extralight uppercase'>kindness</span>, advocating for <span className='text-[#E56D13] font-martel-sans font-extralight uppercase'>animal rights</span>, and promoting sustainable living.
               Safety and trust are at the core of everything we do. We've built Vegachat with your security in mind, ensuring that you can engage with confidence and peace of mind. Join us in fostering connections, sharing stories, and making a positive impact in the world.</p>
