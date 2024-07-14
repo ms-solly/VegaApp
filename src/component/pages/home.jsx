@@ -1,5 +1,5 @@
 import { createEffect, createSignal, onMount } from "solid-js";
-import {CgHome} from 'solid-icons/cg'
+import { BiRegularHome } from 'solid-icons/bi';
 import {CgProfile} from 'solid-icons/cg'
 import {IoSettingsOutline} from 'solid-icons/io'
 import {FaSolidToggleOff} from 'solid-icons/fa'
@@ -199,7 +199,7 @@ const Home = () => {
        {/* <NavBottom/> */}
        <nav class="fixed bottom-0  bg-gray-300 text-gray-800 w-full py-4 shadow-md flex items-center justify-between p-20 space-x-10 ">
             <button class="fixed bottom-0 left-0 p-5" >🥡</button>
-            <a href="/" class="" ><CgHome title="home" /></a>
+            <a href="/" class="" ><BiRegularHome title="home" /></a>
             
             <a href="/profile" text="profile"><CgProfile/></a>
             

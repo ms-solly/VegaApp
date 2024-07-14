@@ -8,8 +8,7 @@
     .font-outline-4 {
       -webkit-text-stroke: 4px black;
     }
-  }
-
+}
   .dancing-veggies {
     display: flex;
     justify-content: center;
@@ -53,3 +52,4 @@
 body{
   background: rgb(189, 218, 253);
 }
+
