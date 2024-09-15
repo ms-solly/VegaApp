@@ -1,10 +1,16 @@
-// import Home from './component/home'
-// // import { Route } from 'solid-app-router';
+import { Route, Router, Routes } from "solid-app-router";
+import Home from "./pages/home";
+import Feed from "./pages/Feed";
 
-// const App = () => {
-//   return (
-//     <Home/>
-//   );
-// };
+function App() {
+  return (
+    <Router>
 
-// export default App;
+        <Route path="/" component={Home} />
+        <Route path="/feed" component={Feed} />
+
+    </Router>
+  );
+}
+
+export default App;
