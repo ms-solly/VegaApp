@@ -1,9 +1,10 @@
 import { lazy } from "solid-js";
 import { render } from "solid-js/web";
-// import { Router, Route } from "@solidjs/router";
+import { Router, Route } from "@solidjs/router";
 import "./index.css";
 const Home = lazy(() => import("./pages/home"));
 import App from "./App";
+import Feed from "./pages/Feed";
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
 
@@ -24,6 +25,14 @@ import App from "./App";
 
 
 
-  render(() => <App />, document.getElementById("root"));
+  render(() => 
+    <Router root={<App/>}>
+
+    <Route path="/" element={<Home />} />
+    <Route path="/feed" element={<Feed />} />
+
+</Router>
+  
+    , document.getElementById("root"));
 
 
